@@ -1,2 +1,15 @@
-<h1>Appointments#new</h1>
-<p>Find me in app/views/appointments/new.html.erb</p>
+<h1>Add an Appointment</h1>
+<hr />
+
+<%= form_for @appointment do |f| %>
+<%= f.select :doctor_id, options_for_select(@doctor) %>
+<%= f.select :patient_id, options_for_select(@patient) %>
+<%= f.text_field :date, required: true, placeholder: 'Date' %>
+
+<%= f.submit nil, class: 'btn' %>
+<% end %>
+
+<hr />
+
+<%= link_to 'All Doctors', doctors_path %>
+<%= link_to 'All Patients', patients_path %>
