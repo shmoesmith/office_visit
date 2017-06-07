@@ -12,7 +12,7 @@
         <% @doctors.each do |doctor| %>
             <tr>
                 <td><%= doctor.name %></td>
-                <td><%= doctor.speciality %></td>
+                <td><%= doctor.specialty %></td>
                 <td><%= link_to 'Show', doctor %></td>
                 <td><%= link_to 'Edit', edit_doctor_path(doctor) %></td>
                 <td><%= link_to 'Delete', doctor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -23,6 +23,6 @@
 <br />
 
 <%= link_to 'New Doctor', new_doctor_path %>
-<%= link_to 'Add Patient to Doctor', new_appointment_path %>
+<%= link_to 'Add Appointment', new_appointment_path %>
 
 

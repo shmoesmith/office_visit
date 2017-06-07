@@ -9,6 +9,7 @@ class PatientsController < ApplicationController
   end
 
   def show
+    redirect_to patients_path
   end
 
   def create

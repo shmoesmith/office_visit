@@ -3,8 +3,9 @@ class AppointmentsController < ApplicationController
     #we are setting @doctors and @patients to map out as an 
     #array so that we can select from the list of doctors and
     #patients in our new appointment form
-    @doctors = Doctor.all.map{ |d| [d.name, d.id]}
-    @patients = Patient.all.map{ |p| [p.name, p.id]}
+
+    @doctors = Doctor.all.map { |d| [d.name, d.id] }
+    @patients = Patient.all.map { |p| [p.name, p.id] }
     @appointment = Appointment.new
   end
 
