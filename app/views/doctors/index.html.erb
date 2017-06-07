@@ -15,7 +15,7 @@
                 <td><%= doctor.speciality %></td>
                 <td><%= link_to 'Show', doctor %></td>
                 <td><%= link_to 'Edit', edit_doctor_path(doctor) %></td>
-                <td><%= link_to 'Delete', doctor, method: :deleted { confirm: 'Are you sure?' } %></td>
+                <td><%= link_to 'Delete', doctor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
             </tr>
         <% end %>
     </tbody>

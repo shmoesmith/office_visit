@@ -4,5 +4,5 @@ class Doctor < ApplicationRecord
 
     #associations
     has_many :appointments, dependent: :destroy
-    has many: patients, through: :appointments
+    has_many :patients, through: :appointments
 end
