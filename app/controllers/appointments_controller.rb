@@ -1,4 +1,7 @@
 class AppointmentsController < ApplicationController
+  def index
+    @appointments = Appointment.all
+  
   def new
     #we are setting @doctors and @patients to map out as an 
     #array so that we can select from the list of doctors and
@@ -12,7 +15,7 @@ class AppointmentsController < ApplicationController
   def create
     @appointment = Appointment.new(appointment_params)
       if @appointment.save
-        redirect_to :back
+        redirect_to doctors_path
       else
         render :new
       end
