@@ -1,6 +1,7 @@
 class AppointmentsController < ApplicationController
   def index
     @appointments = Appointment.all
+  end
   
   def new
     #we are setting @doctors and @patients to map out as an 
@@ -22,9 +23,10 @@ class AppointmentsController < ApplicationController
   end
 
   def destroy
+    doctor = Doctor.find(params[:doctor_id])
     appointment = Appointment.find(params[:id])
     appointment.destroy
-    redirect_to :back
+    redirect_to doctor_path(doctor)
   end
 
 private
